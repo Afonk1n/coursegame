@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 320077640}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -440,7 +440,7 @@ MonoBehaviour:
   maxZoom: 15
   pitch: 2
   yawSpeed: 100
-  currentZoom: 10
+  currentZoom: 5
   currentYaw: 0
 --- !u!1001 &1924477188
 PrefabInstance:
@@ -913,4 +913,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   distance: 0
-  target: {fileID: 250967360}
+  target: {x: 0, y: 0, z: 0}
+  act: 

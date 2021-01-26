@@ -13,7 +13,7 @@ public class HeroCamera : MonoBehaviour
     public float pitch = 2f;
     public float yawSpeed = 100f;
 
-    public float currentZoom = 10f;
+    public float currentZoom = 5f;
     public float currentYaw = 0;
 
     void Update()
@@ -21,7 +21,7 @@ public class HeroCamera : MonoBehaviour
         currentZoom -= Input.GetAxis("Mouse ScrollWheel") * zoomSpeed;
         currentZoom = Mathf.Clamp(currentZoom, minZoom, maxZoom);
 
-        currentYaw -= Input.GetAxis("Horizontal") * yawSpeed * Time.deltaTime;
+        currentYaw += Input.GetAxis("Horizontal") * yawSpeed * Time.deltaTime; //При смене + на - сменяться стороны повотора камеры
 
         transform.position = target.position - offset * currentZoom;
         transform.LookAt(target.position + Vector3.up * pitch);

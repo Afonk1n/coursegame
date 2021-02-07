@@ -10,4 +10,5 @@ public class Item : MonoBehaviour
     public int mass;
     public string pathSprite;
     public string pathPrefab;
+    public bool isStackable;
 }
